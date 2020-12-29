@@ -1,7 +1,7 @@
 # 開発要件
 
 ## appname
-- 小っさいおじさん
+- 
 
 ## ペルソナ
 - 性別：問わない
@@ -51,17 +51,17 @@
 | encrypted_password | string | null: false               |
 
 ### Association
-- has_one : score
-
-## games
+- has_one : scores
+- has_one : gameids
+## gameid
 
 | Column  | Type      | Option            |
 | ------- | --------- | ----------------- |
 | user_id | reference | foreign_key: true |
 
 ### Association
-has_one : scores
-has_one : users
+has_one  : scores
+has_one  : users
 
 ## scores テーブル
 
@@ -74,4 +74,4 @@ has_one : users
 ### Association
 
 - has_one :users
-- belong_to :gameid
+- has_one :gameid
